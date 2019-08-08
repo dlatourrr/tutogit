@@ -1,0 +1,44 @@
+.navbar	{
+	background-color: black;
+	overflow: hidden;
+	}
+
+.navbar a {
+	float: left;
+	text-decoration: none;
+	font-size: 1em;
+	font-family: Helvetica, sans-serif;
+	background-color: black;
+	color: white;
+	padding: 15px 25px;
+    }
+.navbar a:hover {background: yellow; color: black;}
+
+.desplegable {
+	overflow: hidden;
+	float: left;		
+	}
+.desplegable .btn {
+	font-size: 1em;
+	font-family: Helvetica, sans-serif;
+	color: white;
+	background: black;
+	padding: 15px 25px;
+	border: 0; 
+	}
+
+.desplegable .btn:hover	{background-color: yellow;color: black;}
+
+.submenu{
+	display: none;
+	position: absolute;
+	min-height: 140px;
+	z-index: 2;
+	}
+
+.submenu a{
+	float: none;
+	display: block;
+	}
+
+.desplegable:hover	.submenu {display: block;}
