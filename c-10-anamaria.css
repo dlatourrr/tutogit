@@ -1,0 +1,77 @@
+/*Propiedades GRID CONTAINER*/
+
+/*1 PROPIEDAD : GRID-TEMPLATE COLUMN*/
+.g-cont{
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%; /*define el numero de columna y el ancho que le quiero dar*/
+	background: pink;
+}
+.g-cont div {
+	background: green; 
+	border: solid 1px;
+	padding: 1.5em;
+	text-align: center;
+	color: white;
+}
+.g-cont2{
+	display: grid;
+	grid-template-columns: repeat(3,auto);
+	grid-template-rows: 100px 100px 200px auto; /*define la altura de las filas*/
+}
+.g-cont2 div {
+	background: aqua; 
+	border: solid 1px;
+	padding: 1.5em;
+	text-align: center;
+	color: black;
+}
+.g-cont3{
+	display: grid;
+	grid-template-columns: repeat(3,auto);
+	grid-template-rows: 100px 100px 100px auto; 
+	grid-column-gap: 1em; /*nos define el espacio entre las columnas*/
+	grid-row-gap: 1em;/*nos define el espacio entre las filas*/
+	background-color: red;
+}
+.g-cont3 div {
+	background: navy; 
+	border: solid 1px;
+	padding: 1.5em;
+	text-align: center;
+	color: white;
+}
+.g-cont4{
+	display: grid;
+	grid-template-columns: repeat(3,200px);
+	grid-template-rows: 100px 100px 100px auto; 
+	justify-content: space-around;/*dsitribuye el contenido*/
+	align-content: center;
+	background-color: silver;
+	height: 400px;
+}
+.g-cont4 div {
+	background: purple; 
+	border: solid 1px;
+	padding: 1.5em;
+	text-align: center;
+	color: white;
+}
+
+
+
+
+
+/*MEDIA QUERYS*/
+body {background-color: blue;}
+h1 {text-align: right;}
+
+@media screen and (min-width: 800px) /*condicional para cuando
+el minimo de pantalla sea tanto cumpla esto__ */{
+	body {background-color: red;}
+	h1 {text-align: center;}
+}
+
+@media screen and (min-width: 1000px){
+	body{background-color: gold;} 
+	h1 {text-align: left;}
+}
