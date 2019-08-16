@@ -58,6 +58,50 @@
 }
 
 
+.g-items{
+	display: grid;
+	grid-template-columns: repeat(4,auto);
+	grid-template-rows: 100px 100px 100px auto; 
+	background-color: black;
+	height: 350px;
+}
+.g-items div {
+	background: yellow; 
+	border: solid 1px;
+	padding: 1.5em;
+	text-align: center;
+	color: black;
+}
+.g-items div.item1 {
+	color: red;
+	font-size: 1em;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.g-items div.item5 {
+	color: red;
+	font-size: 1em;
+	grid-column-start: 2;
+	grid-column-end: 4;
+}
+
+
+
+.g-items div.item2 {
+	color: blue;
+	font-size: 1em;
+	grid-row-start: 1;
+	grid-row-end: 4;
+}
+
+.g-items div.item8 {
+	color: blue;
+	font-size: 1em;
+	grid-row-start: 2;
+	grid-row-end: 4;
+}
+
 
 
 
@@ -69,6 +113,7 @@ h1 {text-align: right;}
 el minimo de pantalla sea tanto cumpla esto__ */{
 	body {background-color: red;}
 	h1 {text-align: center;}
+	.g-cont {grid-template-columns: auto;}
 }
 
 @media screen and (min-width: 1000px){
