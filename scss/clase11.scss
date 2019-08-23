@@ -1,0 +1,126 @@
+@import "scss/nav";
+
+/*Declarando variables*/
+/*sirven para almacenar informacion*/
+
+$color-principal: green; 
+$color-secundario: blue;
+$color-complementario: pink;
+
+$font-title: bold 4em "open sans", sans-serif;
+
+
+body {background:black;}
+
+h1 {text-align:center; font:$font-title; color:$color-principal;}
+
+
+/*-BEM-----*/
+.quienes {background: white;}
+.quienes__integrantes {margin:1em 0; font-size:1.3em; color:$color-secundario;
+text-align:right;}
+.quienes__integrantes--destacado {@extend .quienes__integrantes; color:$color-complementario; border:solid 1px red; paddin:2em;}
+
+
+/*--OPERADORES-----*/
+
+$ancho:600px;
+
+.quienes_box1{
+	width:$ancho*2;
+	background:$color-principal;
+	color:white;
+	padding:1em;
+	font-size:1.5em;
+}
+
+.quienes_box2{
+	width:$ancho/2;
+	background:$color-secundario;
+	color:white;
+	padding:1em;
+	font-size:1.5em;
+}
+
+.quienes_box3{
+	width:$ancho+100;
+	background:$color-complementario;
+	color:black;
+	padding:1em;
+	font-size:1em;
+}
+
+
+/*--CONDICIONALES-----*/
+
+$layout:layout3;
+
+.header_title {
+
+@if 1+1==2 {border-bottom:solid 1px white;}
+
+	@if $layout == layout1 {
+	background:yellow;
+	color:black;
+	}
+	@else if $layout == layout2 {
+	background:blue;
+	color:white;
+	}
+	@else if $layout == layout3 {
+	background:red;
+	color:white;
+	}
+	@else {
+	background:orange;
+	color:black;
+	}
+}
+
+
+/*--BUCLES-----*/
+/*@for*/
+@for $i from 1 through 4 {
+	.todos#{$i} {width:300px * $i; padding: 1em; background:pink;}
+}
+
+@for $i from 1 to 4 {
+	.todos#{$i} {width:200px * $i; padding: 1em; background:yellow;}
+}
+
+/*--@each--*/
+
+$lista: beto pepe pocho;
+@each $skater in $lista {
+	.#{$skater}-icon {background-image:url("../img/#{$skater}.jpg");
+	width:300px;
+	height:300px;
+	border:solid white 1px;
+	}
+
+}
+
+/*-MAPS--*/
+
+$color:(twitter:blue,facebook:black,whatsapp:green);
+
+@each $namecolor, $bg-color in $color {
+	.btn--#{$namecolor} {
+	background-color:$bg-color;
+	padding: 15px 25px;
+	font-size:1.5em;
+	}
+}
+
+/*-MIXINS--*/
+
+@mixin sizes($width,$height) {
+	width:$width;
+	height:$height;
+}
+
+.box {
+	@include sizes(700px,300px);
+	background:green;
+}
+

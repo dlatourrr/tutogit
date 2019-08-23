@@ -1,0 +1,146 @@
+/* Nesting o anidando*/
+ul {
+  list-style-type: none; }
+  ul li {
+    display: inline-block; }
+    ul li a {
+      text-decoration: none;
+      background: orange;
+      color: black;
+      padding: 15px 25px; }
+    ul li a:hover {
+      color: white;
+      background: indigo;
+      padding: 25px 35px;
+      font-size: 1em; }
+
+/*Declarando variables*/
+/*sirven para almacenar informacion*/
+body {
+  background: black; }
+
+h1 {
+  text-align: center;
+  font: bold 4em "open sans", sans-serif;
+  color: green; }
+
+/*-BEM-----*/
+.quienes {
+  background: white; }
+
+.quienes__integrantes, .quienes__integrantes--destacado {
+  margin: 1em 0;
+  font-size: 1.3em;
+  color: blue;
+  text-align: right; }
+
+.quienes__integrantes--destacado {
+  color: pink;
+  border: solid 1px red;
+  paddin: 2em; }
+
+/*--OPERADORES-----*/
+.quienes_box1 {
+  width: 1200px;
+  background: green;
+  color: white;
+  padding: 1em;
+  font-size: 1.5em; }
+
+.quienes_box2 {
+  width: 300px;
+  background: blue;
+  color: white;
+  padding: 1em;
+  font-size: 1.5em; }
+
+.quienes_box3 {
+  width: 700px;
+  background: pink;
+  color: black;
+  padding: 1em;
+  font-size: 1em; }
+
+/*--CONDICIONALES-----*/
+.header_title {
+  border-bottom: solid 1px white;
+  background: red;
+  color: white; }
+
+/*--BUCLES-----*/
+/*@for*/
+.todos1 {
+  width: 300px;
+  padding: 1em;
+  background: pink; }
+
+.todos2 {
+  width: 600px;
+  padding: 1em;
+  background: pink; }
+
+.todos3 {
+  width: 900px;
+  padding: 1em;
+  background: pink; }
+
+.todos4 {
+  width: 1200px;
+  padding: 1em;
+  background: pink; }
+
+.todos1 {
+  width: 200px;
+  padding: 1em;
+  background: yellow; }
+
+.todos2 {
+  width: 400px;
+  padding: 1em;
+  background: yellow; }
+
+.todos3 {
+  width: 600px;
+  padding: 1em;
+  background: yellow; }
+
+/*--@each--*/
+.beto-icon {
+  background-image: url("../img/beto.jpg");
+  width: 300px;
+  height: 300px;
+  border: solid white 1px; }
+
+.pepe-icon {
+  background-image: url("../img/pepe.jpg");
+  width: 300px;
+  height: 300px;
+  border: solid white 1px; }
+
+.pocho-icon {
+  background-image: url("../img/pocho.jpg");
+  width: 300px;
+  height: 300px;
+  border: solid white 1px; }
+
+/*-MAPS--*/
+.btn--twitter {
+  background-color: blue;
+  padding: 15px 25px;
+  font-size: 1.5em; }
+
+.btn--facebook {
+  background-color: black;
+  padding: 15px 25px;
+  font-size: 1.5em; }
+
+.btn--whatsapp {
+  background-color: green;
+  padding: 15px 25px;
+  font-size: 1.5em; }
+
+/*-MIXINS--*/
+.box {
+  width: 700px;
+  height: 300px;
+  background: green; }
