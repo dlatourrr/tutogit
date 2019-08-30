@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!--SIEMPRE VA, AVISA LA ESCALA-->
+	
+	<title>CLASE 14</title>
+	<!--CDN BOOTSTRAP-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!--lo copiamos de www.bootstrap.com ESTO SIEMPRE VA AL INICIO -->
+	<link rel="stylesheet" href="css/estiloscss.css">
+
+
+</head>
+<body>
+	<header>
+		<h1 class="display-2 text-center my-3 btn-dark text-warning">Bootstrap</h1>
+
+		<nav class="navbar navbar-expand-md navbar-light bg-light"><!--controlo la aparicion de la hamburguesa-->
+			<a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo"></a><!--imagen logo-->
+
+			<!--desarrollo boton hamburguesa-->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu1" aria-controls="menu1" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<!--todo esto es lo que esconde la hamburguesa-->
+			<div class="collapse navbar-collapse" id="menu1">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Integrantes</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Discos
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Disco1</a>
+							<a class="dropdown-item" href="#">Disco2</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Disco3</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+				</form>
+			</div>
+		</nav>
+	</header>
+
+		<section id="c-caro">
+			<div id="demo" class="carousel slide" data-ride="carousel">
+
+				<!-- Indicators -->
+				<ul class="carousel-indicators">
+					<li data-target="#demo" data-slide-to="0" class="active"></li>
+					<li data-target="#demo" data-slide-to="1"></li>
+					<li data-target="#demo" data-slide-to="2"></li>
+				</ul>
+
+				<!-- The slideshow -->
+				<div class="carousel-inner">
+					<div class="carousel-item active" data-interval="5000">
+						<img src="img/nirvana-01.jpg" alt="Nirvana1">
+						<div class="carousel-caption">
+    						<h3>Nirvana</h3>
+    						<p>Concierto en New York</p>
+  						</div>
+					</div>
+					<div class="carousel-item" data-interval="5000">
+						<img src="img/nirvana-02.jpg" alt="Nirvana2">
+						<div class="carousel-caption">
+    						<h3 class="text-danger text-left">Nirvana</h3>
+    						<p class="text-danger text-left">Concierto en Brasil</p>
+  						</div>
+					</div>
+					<div class="carousel-item" data-interval="5000">
+						<img src="img/nirvana-03.jpg" alt="Nirvana3">
+						<div class="carousel-caption">
+    						<h3>Nirvana</h3>
+    						<p>Concierto en New York</p>
+  						</div>
+					</div>
+					<div class="carousel-item" data-interval="5000">
+						<img src="img/nirvana-04.jpg" alt="Nirvana4">
+						<div class="carousel-caption">
+    						<h3>Nirvana</h3>
+    						<p>Concierto en New York</p>
+  						</div>
+					</div>
+				</div>
+
+				<!-- Left and right controls -->
+				<a class="carousel-control-prev" href="#demo" data-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#demo" data-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</a>
+
+
+
+			</div>
+
+		</section>
+
+		<section id="#c-mod">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 my-4"><h5 class="display-4 text-center">MODALS</h5></div>
+					<div class="col-12 my-4 col-md-6">
+						<!-- Button to Open the Modal -->
+						<button type="button" class="btn-block btn-primary" data-toggle="modal" data-target="#myModal">
+							Registrar
+						</button>
+
+						<!-- The Modal -->
+						<div class="modal" id="myModal">
+							<div class="modal-dialog">
+								<div class="modal-content">
+
+									<!-- Modal Header -->
+									<div class="modal-header bg-success">
+										<h4 class="modal-title">Registro</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									</div>
+
+									<!-- Modal body -->
+									<div class="modal-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta distinctio, esse maxime aliquam explicabo impedit assumenda quod nobis inventore magnam praesentium omnis at quos, iure. Earum nesciunt necessitatibus, nam molestias.
+									</div>
+
+									<!-- Modal footer -->
+									<div class="modal-footer">
+										<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+										<button type="button" class="btn btn-success" data-dismiss="modal">Volver</button>
+
+									</div>
+
+									
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 my-4 col-md-6">
+						<!-- Button to Open the Modal -->
+						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal2">
+							Salir
+						</button>
+
+						<!-- The Modal -->
+						<div class="modal" id="myModal2">
+							<div class="modal-dialog">
+								<div class="modal-content">
+
+									<!-- Modal Header -->
+									<div class="modal-header">
+										<h4 class="modal-title">Cancelar</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									</div>
+
+									<!-- Modal body -->
+									<div class="modal-body bg-warning">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nisi ducimus porro eius neque labore quisquam alias iusto minima modi. At perspiciatis possimus officiis accusantium doloribus tempora reprehenderit rerum, delectus?
+									</div>
+
+									<!-- Modal footer -->
+									<div class="modal-footer">
+										<button type="button" class="btn-block btn-danger" data-dismiss="modal">Close</button>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+		</section>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--ESTO SIEMPRE VA (SCRIPTS DE BOOTSTRAP)-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
